@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>chaussures tunisiennes</title>
+        <meta name="description" content="vente en ligne">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Librairie -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- chaussure -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body onload="createColors()">
+        <div id="content" class="container">
+        <!-- Head-->
+        <header>
+            <h1>Chaussure Tunisienne "Confinement"</h1>
+        </header>
+        
+        <div>
+            <div class="column row-padding" style = "white-space: nowrap">
+                <!-- Stars-->
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+            </div>
+
+            <div class="column">
+                <span class="text-muted">1,293 commentaires</span>
+            </div>
+            <div class="column"></div>
+        </div>
+
+            <div class="column">
+                <h2 id ="price">149.99 dinars</h2>
+            </div>
+
+            <div class="column">
+                <span id="original-price" class="text-muted">179.99 dinars</span>
+            </div>
+
+            <div class="column">
+                <span class="text-muted"><b>25% de Remise</b></span>
+            </div>
+
+            <p>Offre Exclusive</p>
+
+            <span>
+                <strong>COULEUR:</strong>
+            </span>
+            <span id="color-choice1">Selectionnez une couleur</span>
+
+            <div id="color-chooser">
+                <button class="inline-block color-button button-red" onclick="colorSelect('Rouge');"></button>
+                <button class="inline-block color-button button-violet" onclick="colorSelect('Violet');"></button>
+                <button class="inline-block color-button button-black" onclick="colorSelect('Noir');"></button>
+                <button class="inline-block color-button button-white" onclick="colorSelect('Blanc');"></button>
+                <button class="inline-block color-button button-orange" onclick="colorSelect('Orange');"></button>
+                <button class="inline-block color-button button-yellow" onclick="colorSelect('Jaune');"></button>
+                <button class="inline-block color-button button-navy-blue" onclick="colorSelect('Bleue');"></button>
+                <button class="inline-block color-button button-turquoise" onclick="colorSelect('Turquoise');"></button>
+                <button class="inline-block color-button button-beige" onclick="colorSelect('Beige');"></button>
+                <button class="inline-block color-button button-sky-blue" onclick="colorSelect('Bleue ciel');"></button>
+                <button class="inline-block color-button button-lime-green" onclick="colorSelect('Vert clair');"></button>
+                <button class="inline-block color-button button-pink" onclick="colorSelect('Rose');"></button>
+                <button class="inline-block color-button button-cream" onclick="colorSelect('Crème');"></button>
+                <button class="inline-block color-button button-emerald-green" onclick="colorSelect('Vert Emeraude');"></button>
+                <button class="inline-block color-button button-dark-grey" onclick="colorSelect('Gris noir');"></button>
+                <button class="inline-block color-button button-brown" onclick="colorSelect('Marron');"></button>
+                <button class="inline-block color-button button-aqua-marine" onclick="colorSelect('Bleue Marine');"></button>
+                <button class="inline-block color-button button-light-grey" onclick="colorSelect('Gris clair');"></button>
+
+            </div>
+
+            <p><strong>Guide des tailles</strong></p>
+
+            <p><strong>Votre ajustement personnalisé</strong></p>
+
+            <div>
+                <button id="quantity" class="quantity-button"><strong>0</strong></button>
+                <button id="add-to-cart-button" class="cart-button button-animation" data-toggle="modal" data-target="#myModal" onclick="updateQuant();"><strong>Ajoutez au panier</strong></button>
+                
+                <!-- Modèle -->
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                        <!-- Modèle de chaussure-->
+                        <div class="modal-content">
+                            <div class="modal-body">
+                            <p>Veuillez ajouter la quantité souhaitée</p>
+                            <br>
+                            <div class="inline-block text-center">
+                                <span id="color-choice2" style="margin: 50px; vertical-align: 10px;">Sélectionnez la couleur</span>
+                                <button class="minus-button" onclick="decrement();">-</button>
+                                <span id="quant" style="font-size: 30px; margin: 15px; vertical-align: 10px;">0</span>
+                                <button class="minus-button" onclick="increment();">+</button>
+                            </div>
+                            <br>
+                            <div class="inline-block float-right">
+                                    <button type="button" class="btn btn-default btn-pad agree-btn" data-dismiss="modal" onclick="updateCart();"><strong>Accepter</strong></button>
+                                    <button type="button" class="btn btn-default btn-pad cancel-btn" data-dismiss="modal" onclick="resetQuantity();"><strong>Annuler</strong></button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal fade" id="checkoutModal" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h3 class="modal-title">Shopping Cart</h4>
+                        </div>
+                        <div id="summary" class="modal-body">
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="cart-button button-animation" data-dismiss="modal">Sortir</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <div id="details">
+                <p><strong>DETAILS</strong></p>
+                 <!-- Utilisez les mêmes cercles de couleur à partir du sélecteur de couleurs  -->
+                 <!-- Les cercles correspondent au numéro de cette couleur dans le panier -->
+                <!-- Les cercles sont créés et ajoutés via js -->
+
+
+            </div>
+            <hr>
+            <button class="text-button" data-toggle="modal" data-target="#helpModal"><strong>Besoin d'aide?</strong></button>
+            <div class="modal fade" id="helpModal" role="dialog">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h3 class="modal-title">Aide</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Consultez notre <a href="#"> page d'aide </a> pour obtenir des réponses aux questions fréquemment posées sur la livraison, la commande, le paiement et les produits, ou enregistrez une demande si vous avez besoin d'aide pour quelque chose de spécifique. </p>
+
+                        <p>Un de nos sympathiques assistants d'achat en ligne vous répondra dans les heures ouvrables suivantes:</p> 
+                        
+                        <p>
+                            <strong>Horaires de travail:</strong> 
+                            <br>
+                            En Semaine 7h00 – 22h00
+                            <br>
+                            Weekend 9h00 – 18h00
+                            <br>
+                            Jours fériés 9h00 – 18h00
+                            <br>
+                            (Fermer les jours de l'Aïd)
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Fermez</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <p><strong>Livraisons et retours</strong></p>
+
+
+        </div>
+
+        <script src="js/script.js"></script>
+
+    </body>
+</html>

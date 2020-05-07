@@ -1,0 +1,338 @@
+/* Styling for the entire web-page */
+
+#content {
+    margin: auto;
+    padding: 10px;
+    max-width: 550px;
+}
+
+
+
+#modal-content {
+    vertical-align: middle;
+}
+
+.text-center {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Create three equal columns that float next to each other */
+
+.column {
+    /* float: left; */
+    display: inline-block;
+    width: auto;
+    margin: 5px;
+  }
+
+/* Extra padding for rows in grid */
+
+.row-padding {
+    padding-left: 2%;
+}
+
+/* Styling for header */
+
+header{
+    position: relative;
+}
+
+/* Styling for price tag */
+
+div h2{
+    color: rgb(209, 95, 121);
+}
+
+/* Extra padding for paragraphs */
+
+div p{
+    padding-top: 5px;
+    padding-left: 15px;
+}
+
+/* Inline block styling */
+
+.inline-block{
+    display: inline-block;
+}
+
+/* Styling for color buttons */
+
+.color-button {
+    border: none;
+    padding: 14px; 
+    border-radius: 50%;
+    margin: 8px;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+/* Color button hover styling */
+
+.color-button:hover {
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #a4afc0;
+}
+
+/* Syling for color buttons in focus */
+
+.color-button:focus {
+    outline: none;
+    box-shadow:  0 0 0 2px rgb(255, 255, 255), 0 0 0 4px #4d535c;
+}
+
+/* Styling for quantity counter */
+
+.quantity-button {
+    background-color: white;
+    border: black;
+    box-shadow: 0 0 0 1px black;
+    border-radius: 50px/36px;
+    font-size: 16px;
+    width: 70px;
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Hide the fact that the counter is actually a button */
+
+.quantity-button:focus {
+    outline: none;
+}
+
+/* Styling for add to cart button */
+
+.cart-button {
+    background-color: black;
+    /* color: white; */
+    border: none;
+    border-radius: 50px/36px;
+    font-size: 16px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+/* Add to cart button animation */
+
+.cart-button:hover {
+    color: #000 !important;
+    background-color: transparent;
+    text-shadow: nthree;
+}
+.cart-button:hover:before {
+    left: 0%;
+    right: auto;
+    width: 100%;
+}
+
+.cart-button:before {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 0px;
+    z-index: -1;
+    content: '';
+    color: #000 !important;
+    background: #F7CA18;
+    border-radius: 50px/36px;
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.cart-button:focus {
+    outline: none;
+}
+
+/* Syling for pop-up modal */
+
+.modal {
+    margin:0 auto;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-header
+{
+display: block!important;
+}
+.modal-title
+{
+float: left;
+}
+.modal-header .close
+{
+float: right;
+}
+
+/* Styling for the close Button (X in need help modal)*/
+
+.close {
+    color: darkgrey;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+/* Syling for minus (also used for plus) button 
+ * Circular button with specified size/layout for modal
+*/
+
+.minus-button {
+    display: inline-block;
+    border: none;
+    border-radius: 50%;
+    font-size: 50px;
+    line-height: 50px;
+    background-color: black;
+    color: white;
+    width: 65px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 0px;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 18%; 
+}
+
+.minus-button:focus {
+    outline: none;
+}
+
+.minus-button:active {
+    background-color: darkgrey;
+}
+
+/* Styling for agree and close/cancel button */
+
+.btn-pad {
+    position: relative;
+    /* lesft:40%; */
+    margin: 10px;
+    margin-top: 30px;
+    right: 15%;
+    border: 1px solid black;
+}
+
+.agree-btn {
+    background-color: rgba(124, 212, 131, 0.466);
+    border: 1px solid rgb(58, 167, 130);
+}
+
+.cancel-btn {
+    background-color: rgba(255, 182, 193, 0.719);
+    border: 1px solid rgb(139, 67, 78);
+
+}
+
+/* Styling for horizonal rule */
+
+div hr {
+    height: 1px;
+    color: black;
+    background-color: black;
+}
+
+/* Styling for Need Help text/button */
+
+.text-button {
+    background:none;
+    border:none;
+    margin:0;
+    padding: 15px;
+    cursor: pointer;
+}
+
+/* Color styling for all the color buttons */
+
+.button-violet {
+    background-color: rgb(76, 0, 255);
+}
+
+.button-red {
+    background-color: #C62930;
+}
+
+.button-black {
+    background-color: black;
+}
+
+.button-white {
+    background-color: white;
+}
+
+.button-orange {
+    background-color: orange;
+}
+
+.button-yellow {
+    background-color: yellow;
+}
+
+.button-navy-blue {
+    background-color: #1D53AE;
+}
+
+.button-turquoise {
+    background-color: rgb(0, 255, 204);
+}
+
+.button-beige {
+    background-color: #DAB595;
+}
+
+.button-sky-blue {
+    background-color: rgb(101, 191, 255);
+}
+
+.button-lime-green {
+    background-color: #90FA4D;
+}
+
+.button-pink {
+    background-color: #EA37B3;
+}
+
+.button-cream {
+    background-color: #DAB595;
+}
+
+.button-emerald-green {
+    background-color: rgb(0, 255, 166);
+}
+
+.button-dark-grey {
+    background-color: #6F6975;
+}
+
+.button-brown {
+    background-color: #6E502B;
+}
+
+.button-aqua-marine {
+    background-color:rgb(0, 24, 66) ;
+}
+
+.button-light-grey {
+    background-color: #C4C4C4;
+}
